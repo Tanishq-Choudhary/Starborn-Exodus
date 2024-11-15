@@ -1,13 +1,16 @@
 #Code By Tanishq-Choudhary @ Github
-
+import os
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import random
 import pygame
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+bgm_path = os.path.join(script_dir,"assets","bgm.mp3")
+
 pygame.mixer.init()
 def play():
-    pygame.mixer.music.load("assets/bgm.mp3")
+    pygame.mixer.music.load(bgm_path)
     pygame.mixer.music.play(loops=99)
 
 play()
