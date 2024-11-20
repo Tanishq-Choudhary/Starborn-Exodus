@@ -1,4 +1,5 @@
 #Code By Tanishq-Choudhary @ Github
+
 import os
 import tkinter as tk
 from tkinter import messagebox, simpledialog
@@ -244,7 +245,7 @@ class GameApp(tk.Tk):
 
     def attack_first(self):
         
-        if self.player.attack >= 20:
+        if random.randint(1, 10) > 4:
             damage_dealt = random.randint(40, 60)
             self.betrayer_god_health -= damage_dealt
             messagebox.showinfo("Fierce Strike", (
@@ -303,7 +304,7 @@ class GameApp(tk.Tk):
             self.break_the_connection()
 
     def fight_through_shadows(self):
-        if self.player.attack >= 25:
+        if random.randint(1, 10) > 4:
             damage_dealt = random.randint(50, 70)
             self.betrayer_god_health -= damage_dealt
             messagebox.showinfo("Fury Unleashed", (
@@ -362,7 +363,8 @@ class GameApp(tk.Tk):
 
     def final_charge(self):
         
-        if self.player.attack >= 30:
+        #if self.player.attack >= 30:
+        if random.randint(1, 10) > 4:
             damage_dealt = random.randint(80, 100)
             self.betrayer_god_health -= damage_dealt
             messagebox.showinfo("Final Strike", (
@@ -638,7 +640,8 @@ class GameApp(tk.Tk):
                                         "You stand there, trying to reach them with words, but there is only fury in their eyes.")
 
         
-        if self.player.xp >= 50:  
+        #if self.player.xp >= 50:  
+        if random.randint(1, 10) > 4:
             self.end_negotiation_success()
         else:  
             self.end_negotiation_failure()
